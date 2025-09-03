@@ -6,8 +6,8 @@ const PrivacyPolicyPage = () => {
       <Head>
         <title>Kebijakan Privasi - ABI</title>
       </Head>
-      <div className="bg-gray-50 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+      <div className="bg-white-50 min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg">
           <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">
             Kebijakan Privasi
           </h1>

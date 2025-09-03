@@ -35,7 +35,7 @@ export default function Home() {
       image: "/pp1.png", // Ganti dengan path foto Anda
     },
   ];
-  
+
 
   const homepageProducts = [
     { id: 1, name: "Dinar 4,25 gr", weight: "4,25 gram", image: "/Dinar.png" },
@@ -63,14 +63,14 @@ export default function Home() {
           content="Situs web profil perusahaan emas semi-komersial."
         />
 
-      <link rel="icon" href="/Abi.png" />
+        <link rel="icon" href="/Abi.png" />
 
       </Head>
       {/* Bagian 1: Hero Section */}
       <div className="relative h-screen flex items-center justify-start">
         <div className="absolute inset-0 bg-[url('/Gambar1.png')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 container mx-auto px-6 py-16 text-white">
+        <div className="relative z-10 container mx-auto px-6 py-6 text-white">
           <div className="max-w-xl">
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
               Investasi Aman, Masa Depan Cerah
@@ -121,7 +121,9 @@ export default function Home() {
         {/* Kontainer Flexbox untuk memusatkan dua produk */}
         <div className="flex justify-center gap-8 flex-wrap">
           {homepageProducts.slice(0, 2).map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <Link key={product.id} href={`/products/${product.id}`}>
+              <ProductCard key={product.id} product={product} />
+            </Link>
           ))}
         </div>
 
@@ -233,7 +235,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center items-center gap-6 mb-12">
             {/* Marketplace Images */}
             <Link
-              href="https://shopee.co.id"
+              href="https://shopee.co.id/abiaurum"
               target="_blank"
               rel="noopener noreferrer"
               className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex justify-center"
@@ -242,38 +244,6 @@ export default function Home() {
                 <Image
                   src="/shopee.png"
                   alt="Shopee"
-                  layout="fill"
-                  objectFit="contain"
-                  className="hover:scale-110 transition-transform"
-                />
-              </div>
-            </Link>
-            <Link
-              href="https://tokopedia.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex justify-center"
-            >
-              <div className="relative w-full" style={{ height: "100px" }}>
-                <Image
-                  src="/tokopedia.png"
-                  alt="Tokopedia"
-                  layout="fill"
-                  objectFit="contain"
-                  className="hover:scale-110 transition-transform"
-                />
-              </div>
-            </Link>
-            <Link
-              href="https://tiktok.com/shop"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex justify-center"
-            >
-              <div className="relative w-full" style={{ height: "100px" }}>
-                <Image
-                  src="/tiktok.png"
-                  alt="TikTok Shop"
                   layout="fill"
                   objectFit="contain"
                   className="hover:scale-110 transition-transform"
@@ -290,7 +260,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center items-center gap-4">
             {/* App Store Images */}
             <Link
-              href="https://play.google.com/store"
+              href="https://play.google.com/store/apps/details?id=com.abigold"
               target="_blank"
               rel="noopener noreferrer"
               className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex justify-center"
@@ -299,22 +269,6 @@ export default function Home() {
                 <Image
                   src="/py.png"
                   alt="Google Play"
-                  layout="fill"
-                  objectFit="contain"
-                  className="hover:scale-110 transition-transform"
-                />
-              </div>
-            </Link>
-            <Link
-              href="https://www.apple.com/app-store/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex justify-center"
-            >
-              <div className="relative w-full" style={{ height: "120px" }}>
-                <Image
-                  src="/ap.png"
-                  alt="App Store"
                   layout="fill"
                   objectFit="contain"
                   className="hover:scale-110 transition-transform"

@@ -1,8 +1,9 @@
 // pages/products.js
 import Head from 'next/head';
 import ProductCard from './components/ProductCard';
+import Link from 'next/link';
 
-// Data produk dummy yang hanya berisi dua item
+// Data produk dummy
 const products = [
   { id: 1, name: '1 Dinar 4,25gr', weight: '4,25 gram', image: '/Dinar.png' },
   { id: 2, name: 'Find Gold', weight: '1 gram', image: '/find.png' },
@@ -25,7 +26,9 @@ export default function Products() {
         {/* Kontainer Flexbox untuk memusatkan produk */}
         <div className="flex justify-center gap-8 flex-wrap">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <Link key={product.id} href={`/products/${product.id}`}>
+              <ProductCard product={product} />
+            </Link>
           ))}
         </div>
       </div>

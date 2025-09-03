@@ -1,0 +1,99 @@
+[
+    {
+        "id": 1,
+        "name": "1 Dinar Emas 4,25gr",
+        "image": "/banner-dinar.png",
+        "additionalImages": [
+            "/dinar-kemasan.png",
+            "/dinar-full.png"
+        ],
+        "description": "Nikmati keindahan dan nilai investasi sejati dengan 1 Dinar Emas yang dirancang khusus oleh desainer profesional. Setiap kepingan dinar ini merupakan perpaduan antara seni, kemurnian, dan nilai intrinsik yang tinggi, menjadikannya pilihan tepat bagi kolektor, investor, dan pecinta emas.\n\nKalimat \"Innalaha ma'ashobirin\" (إِنَّ اللّهَ مَعَ الصَّابِرِينَ) adalah sebuah ayat dalam Al-Qur'an yang terdapat dalam Surah Al-Baqarah, ayat 153. Artinya, \"Sesungguhnya Allah bersama orang-orang yang sabar.\"\n\nMakna dari ayat ini adalah bahwa Allah senantiasa memberikan pertolongan, keberkahan, dan dukungan kepada orang-orang yang bersabar dalam menghadapi ujian, kesulitan, atau cobaan hidup. Orang yang sabar adalah mereka yang tetap teguh dalam iman dan tidak mudah putus asa, meskipun mereka mengalami kesulitan atau penderitaan. Sabar bukan hanya berarti menahan diri, tetapi juga menghadapinya dengan hati yang ikhlas dan tawakal kepada Allah.",
+        "advantages": [
+            {
+                "title": "Desain Eksklusif & Original",
+                "description": "Dibuat oleh desainer profesional dengan detail artistik yang elegan dan bernilai seni tinggi."
+            },
+            {
+                "title": "Kadar Emas 24 Karat (999,9)",
+                "description": "Kemurnian emas murni, menjamin nilai investasi yang optimal."
+            },
+            {
+                "title": "Standar Berat Internasional (4.25 gram)",
+                "description": "Mengikuti standar berat dinar yang diakui di pasar global."
+            },
+            {
+                "title": "Tahan Inflasi & Bernilai Jangka Panjang",
+                "description": "Emas merupakan aset safe haven yang stabil dan selalu bernilai."
+            },
+            {
+                "title": "Ideal untuk Koleksi & Investasi",
+                "description": "Cocok untuk diversifikasi aset dan simpanan masa depan."
+            },
+            {
+                "title": "Sertifikat Keaslian & Keamanan",
+                "description": "Disertai sertifikat resmi yang menjamin keaslian dan kadar emas."
+            }
+        ],
+        "specifications": {
+            "Nama Produk": "1 Dinar Emas",
+            "Material": "Emas Murni 24 Karat (999,9)",
+            "Berat": "4.25 gram",
+            "Diameter": "± 23 mm",
+            "Ketebalan": "± 1.7 mm",
+            "Desain": "Eksklusif, dibuat oleh desainer profesional",
+            "Sertifikat": "Disertai sertifikat keaslian dan kadar emas",
+            "Kemasan": "Dikemas dalam segel khusus untuk menjaga kualitas dan keamanannya"
+        },
+        "closingStatement": "Produk ini tidak hanya sekadar emas, tetapi juga karya seni bernilai tinggi yang dapat diwariskan dari generasi ke generasi. Segera miliki 1 Dinar Emas Desain Eksklusif ini untuk melindungi nilai kekayaan Anda di masa depan!"
+    },
+    {
+        "id": 2,
+        "name": "Emas Logam Mulia 1 Gram",
+        "image": "/banner-lm.png",
+        "additionalImages": [
+            "/lm-kemasan.png",
+            "/lm-full.png"
+        ],
+        "description": "Nikmati keindahan dan nilai investasi sejati dengan Logam Mulia yang dirancang khusus oleh desainer profesional. Setiap kepingan logam mulia ini merupakan perpaduan antara seni, kemurnian, dan nilai intrinsik yang tinggi, menjadikannya pilihan tepat bagi kolektor, investor, dan pecinta emas.",
+        "advantages": [
+            {
+                "title": "Emas Murni 24 Karat (999,9)",
+                "description": "Memiliki tingkat kemurnian tertinggi yang diakui secara global."
+            },
+            {
+                "title": "Desain Eksklusif & Elegan",
+                "description": "Dibuat oleh desainer profesional, memberikan tampilan mewah dan berkelas."
+            },
+            {
+                "title": "Berat Ideal untuk Pemula & Kolektor",
+                "description": "Dengan berat 1 gram, sangat cocok untuk investasi bertahap."
+            },
+            {
+                "title": "Nilai Jangka Panjang & Stabil",
+                "description": "Emas merupakan aset yang tahan terhadap inflasi dan memiliki nilai intrinsik tinggi."
+            },
+            {
+                "title": "Mudah Dijual & Dicairkan",
+                "description": "Dapat dijual kembali dengan harga mengikuti pasar emas dunia."
+            },
+            {
+                "title": "Sertifikat Keaslian & Keamanan",
+                "description": "Disertai sertifikat resmi yang menjamin keaslian dan kadar emas."
+            },
+            {
+                "title": "Kemasan Eksklusif & Aman",
+                "description": "Dikemas dalam segel khusus untuk menjaga keaslian dan kualitas emas."
+            }
+        ],
+        "specifications": {
+            "Nama Produk": "Emas Logam Mulia 1 Gram",
+            "Material": "Emas Murni 24 Karat (999,9)",
+            "Berat": "1 gram",
+            "Dimensi": "Disesuaikan dengan standar logam mulia",
+            "Desain": "Eksklusif, dibuat oleh desainer profesional",
+            "Sertifikat": "Disertai sertifikat keaslian dan kadar emas",
+            "Kemasan": "Segel khusus dengan desain premium"
+        },
+        "closingStatement": "Dengan ukuran yang praktis dan harga yang lebih terjangkau dibandingkan emas dengan berat lebih besar, Emas Logam Mulia 1 Gram sangat cocok bagi pemula, kolektor, maupun investor yang ingin memiliki aset emas dengan kualitas terbaik. Segera miliki Emas Logam Mulia 1 Gram ini sebagai bentuk perlindungan kekayaan Anda di masa depan!"
+    }
+]
