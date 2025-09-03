@@ -24,3 +24,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes slideInFromRightInPlace {
+  from {
+    transform: translateX(10%); /* Bergeser dari 10% ke kanan */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* Berakhir di posisi normal */
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-in-place {
+  animation: slideInFromRightInPlace 0.6s ease-out forwards;
+}
+

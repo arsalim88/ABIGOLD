@@ -1,115 +1,325 @@
+import Head from "next/head";
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import ProductCard from "./components/ProductCard";
 
 export default function Home() {
+  const goldPrices = [
+    { type: "Emas Batangan", weight: "10 gram", price: "Rp 10.500.000" },
+    { type: "Emas Batangan", weight: "5 gram", price: "Rp 5.250.000" },
+    { type: "Koin Emas", weight: "1 gram", price: "Rp 1.070.000" },
+    { type: "Emas Perhiasan", weight: "2 gram", price: "Rp 2.050.000" },
+  ];
+
+  // Tambahkan path gambar ke data testimoni
+  const testimonials = [
+    {
+      quote:
+        "Layanan sangat cepat dan produknya terjamin keasliannya. Sangat puas!",
+      name: "Andi S.",
+      title: "Investor",
+      image: "/pp1.png", // Ganti dengan path foto Anda
+    },
+    {
+      quote:
+        "Tampilan website profesional dan fitur verifikasinya sangat membantu. Top!",
+      name: "Budi P.",
+      title: "Pelanggan",
+      image: "/pp2.png", // Ganti dengan path foto Anda
+    },
+    {
+      quote: "Harga emas di sini sangat kompetitif. Rekomendasi banget!",
+      name: "Siti H.",
+      title: "Kolektor",
+      image: "/images/person3.jpg", // Ganti dengan path foto Anda
+    },
+  ];
+
+  const homepageProducts = [
+    { id: 1, name: "Dinar 4,25 gr", weight: "4,25 gram", image: "/Dinar.png" },
+    { id: 2, name: "Find Gold", weight: "1 gram", image: "/find.png" },
+  ];
+
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonialIndex(
+        (prevIndex) => (prevIndex + 1) % testimonials.length
+      );
+    }, 5000); // Ganti testimoni setiap 5 detik
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
+  const currentTestimonial = testimonials[currentTestimonialIndex];
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <>
+      <Head>
+        <title>Emas Kita - Perusahaan Emas Terpercaya</title>
+        <meta
+          name="description"
+          content="Situs web profil perusahaan emas semi-komersial."
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      </Head>
+      {/* Bagian 1: Hero Section */}
+      <div className="relative h-screen flex items-center justify-start">
+        <div className="absolute inset-0 bg-[url('/Gambar1.png')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative z-10 container mx-auto px-6 py-16 text-white">
+          <div className="max-w-xl">
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+              Investasi Aman, Masa Depan Cerah
+            </h1>
+            <p className="text-lg md:text-xl font-light mb-6">
+              Kami menyediakan emas berkualitas tinggi dengan jaminan keaslian
+              dan kemurnian.
+            </p>
+            <Link
+              href="/products"
+              className="bg-green-700 hover:bg-green-900 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300"
+            >
+              Lihat Produk Kami
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      {/* Bagian 2: Tentang Emas */}
+      <div className="container mx-auto py-16 px-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="md:w-1/2 text-center md:text-left">
+            <h2 className="text-3xl font-bold mb-4">
+              Emas: Simbol Kekayaan Abadi
+            </h2>
+            <p className="text-gray-600">
+              Emas telah lama dianggap sebagai investasi yang aman dan stabil.
+              Selain nilai historisnya, emas juga berfungsi sebagai lindung
+              nilai terhadap inflasi dan ketidakpastian ekonomi.
+            </p>
+          </div>
+          <div className="md:w-1/2 flex justify-center md:justify-end">
+            <Image
+              src="/Gambar2.jpg"
+              alt="Emas Batangan"
+              width={500}
+              height={300}
+              className="rounded-lg shadow-xl"
+            />
+          </div>
+        </div>
+      </div>
+      {/* Bagian 3: Produk Unggulan */}
+      <div className="container mx-auto py-16 px-6">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Produk Unggulan Kami
+        </h2>
+
+        {/* Kontainer Flexbox untuk memusatkan dua produk */}
+        <div className="flex justify-center gap-8 flex-wrap">
+          {homepageProducts.slice(0, 2).map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Link
+            href="/products"
+            className="bg-green-800 text-white font-bold py-3 px-8 rounded-full hover:bg-gray-700 transition duration-300"
+          >
+            Lihat Semua Produk
+          </Link>
+        </div>
+      </div>
+      {/* Bagian 4: Tabel Harga Emas */}
+      <div className="bg-gray-100 py-16 px-6">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Harga Emas Hari Ini
+          </h2>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="md:w-1/3 w-full">
+              <Image
+                src="/Gambar2.jpg"
+                alt="Tampilan Emas"
+                width={500}
+                height={500}
+                className="rounded-lg shadow-xl w-full"
+              />
+            </div>
+            <div className="md:w-2/3 w-full">
+              <div className="overflow-x-auto">
+                <table className="min-w-full bg-white rounded-lg shadow-md">
+                  <thead className="bg-gray-200">
+                    <tr>
+                      <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                        Jenis
+                      </th>
+                      <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                        Berat
+                      </th>
+                      <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                        Harga
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {goldPrices.map((item, index) => (
+                      <tr
+                        key={index}
+                        className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
+                      >
+                        <td className="px-6 py-4">{item.type}</td>
+                        <td className="px-6 py-4">{item.weight}</td>
+                        <td className="px-6 py-4 font-bold text-yellow-600">
+                          {item.price}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Bagian 5: Testimoni */}
+      <div className="container mx-auto py-16 px-6">
+        <h2 className="text-3xl font-bold text-center mb-8 ">
+          Apa Kata Mereka?
+        </h2>
+        <div className="flex justify-center testimonial-container">
+          <div className="md:w-2/3">
+            {currentTestimonial && (
+              <div
+                key={currentTestimonial.name}
+                className="bg-white p-6 rounded-lg shadow-lg text-center animate-slide-in-in-place"
+              >
+                <p className="italic text-gray-700 mb-6 text-lg">
+                  "{currentTestimonial.quote}"
+                </p>
+                <div className="flex flex-col items-center">
+                  <Image
+                    src={currentTestimonial.image}
+                    alt={currentTestimonial.name}
+                    width={80}
+                    height={80}
+                    className="rounded-full object-cover mb-4"
+                  />
+                  <p className="font-semibold text-gray-900 text-lg">
+                    {currentTestimonial.name}
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    {currentTestimonial.title}
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+      {/* Bagian 6: Marketplace dan Download App */}
+      <div className="bg-gray-500 text-white py-16 px-6">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            Temukan Kami di Marketplace
+          </h2>
+          <p className="mb-8">
+            Belanja produk emas kami dengan mudah dan aman.
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-6 mb-12">
+            {/* Marketplace Images */}
+            <Link
+              href="https://shopee.co.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex justify-center"
+            >
+              <div className="relative w-full" style={{ height: "100px" }}>
+                <Image
+                  src="/shopee.png"
+                  alt="Shopee"
+                  layout="fill"
+                  objectFit="contain"
+                  className="hover:scale-110 transition-transform"
+                />
+              </div>
+            </Link>
+            <Link
+              href="https://tokopedia.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex justify-center"
+            >
+              <div className="relative w-full" style={{ height: "100px" }}>
+                <Image
+                  src="/tokopedia.png"
+                  alt="Tokopedia"
+                  layout="fill"
+                  objectFit="contain"
+                  className="hover:scale-110 transition-transform"
+                />
+              </div>
+            </Link>
+            <Link
+              href="https://tiktok.com/shop"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex justify-center"
+            >
+              <div className="relative w-full" style={{ height: "100px" }}>
+                <Image
+                  src="/tiktok.png"
+                  alt="TikTok Shop"
+                  layout="fill"
+                  objectFit="contain"
+                  className="hover:scale-110 transition-transform"
+                />
+              </div>
+            </Link>
+          </div>
+
+          <h2 className="text-3xl font-bold mb-4">Download Aplikasi Kami</h2>
+          <p className="mb-8 ">
+            Dapatkan kemudahan verifikasi dan update harga langsung dari
+            smartphone Anda.
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            {/* App Store Images */}
+            <Link
+              href="https://play.google.com/store"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex justify-center"
+            >
+              <div className="relative w-full" style={{ height: "120px" }}>
+                <Image
+                  src="/py.png"
+                  alt="Google Play"
+                  layout="fill"
+                  objectFit="contain"
+                  className="hover:scale-110 transition-transform"
+                />
+              </div>
+            </Link>
+            <Link
+              href="https://www.apple.com/app-store/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex justify-center"
+            >
+              <div className="relative w-full" style={{ height: "120px" }}>
+                <Image
+                  src="/ap.png"
+                  alt="App Store"
+                  layout="fill"
+                  objectFit="contain"
+                  className="hover:scale-110 transition-transform"
+                />
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
