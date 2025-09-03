@@ -230,7 +230,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col items-center">
                 <Image
-                  src={currentTestimonial.image}
+                  src={currentTestimonial == null ? '/placeholder.png' : currentTestimonial?.image}
                   alt={currentTestimonial.name}
                   width={80}
                   height={80}
