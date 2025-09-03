@@ -35,6 +35,7 @@ export default function Home() {
       image: "/pp1.png", // Ganti dengan path foto Anda
     },
   ];
+  
 
   const homepageProducts = [
     { id: 1, name: "Dinar 4,25 gr", weight: "4,25 gram", image: "/Dinar.png" },
@@ -91,10 +92,10 @@ export default function Home() {
       <div className="container mx-auto py-16 px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-3xl font-bold mb-4 text-green-950">
               Emas: Simbol Kekayaan Abadi
             </h2>
-            <p className="text-gray-600">
+            <p className="text-green-950">
               Emas telah lama dianggap sebagai investasi yang aman dan stabil.
               Selain nilai historisnya, emas juga berfungsi sebagai lindung
               nilai terhadap inflasi dan ketidakpastian ekonomi.
@@ -113,7 +114,7 @@ export default function Home() {
       </div>
       {/* Bagian 3: Produk Unggulan */}
       <div className="container mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold text-center mb-8">
+        <h2 className="text-3xl font-bold text-green-950 text-center mb-8">
           Produk Unggulan Kami
         </h2>
 
@@ -136,7 +137,7 @@ export default function Home() {
       {/* Bagian 4: Tabel Harga Emas */}
       <div className="bg-gray-100 py-16 px-6">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">
+          <h2 className="text-3xl font-bold text-green-950 text-center mb-8">
             Harga Emas Hari Ini
           </h2>
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
@@ -154,13 +155,13 @@ export default function Home() {
                 <table className="min-w-full bg-white rounded-lg shadow-md">
                   <thead className="bg-gray-200">
                     <tr>
-                      <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                      <th className="px-6 py-3 text-left font-semibold text-green-950">
                         Jenis
                       </th>
-                      <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                      <th className="px-6 py-3 text-left font-semibold text-green-950">
                         Berat
                       </th>
-                      <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                      <th className="px-6 py-3 text-left font-semibold text-green-950">
                         Harga
                       </th>
                     </tr>
@@ -187,7 +188,7 @@ export default function Home() {
       </div>
       {/* Bagian 5: Testimoni */}
       <div className="container mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold text-center mb-8 ">
+        <h2 className="text-3xl text-green-950 font-bold text-center mb-8 ">
           Apa Kata Mereka?
         </h2>
         <div className="flex justify-center testimonial-container">
@@ -197,7 +198,7 @@ export default function Home() {
                 key={currentTestimonial.name}
                 className="bg-white p-6 rounded-lg shadow-lg text-center animate-slide-in-in-place"
               >
-                <p className="italic text-gray-700 mb-6 text-lg">
+                <p className="italic text-green-950 mb-6 text-lg">
                   "{currentTestimonial.quote}"
                 </p>
                 <div className="flex flex-col items-center">
@@ -221,7 +222,7 @@ export default function Home() {
         </div>
       </div>
       {/* Bagian 6: Marketplace dan Download App */}
-      <div className="bg-gray-500 text-white py-16 px-6">
+      <div className="bg-gray-100 text-green-950 py-16 px-6">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">
             Temukan Kami di Marketplace
