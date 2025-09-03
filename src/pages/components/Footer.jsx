@@ -50,8 +50,7 @@ export default function Footer() {
           <p className="font-bold">PT Aurum Barakah Indonesia</p>
           <p className="text-sm font-semibold">Admin: +62 812-3456-7890</p>
           <p className="text-sm">
-            Jl. Contoh Jalan No. 123, <br />
-            Jakarta Pusat, 10110
+            The Plaza Office Tower, Jl. M.H Thamrin No.Kav. 28-30 Level 7 suite 702,Menteng, Jakarta Pusat, DKI Jakarta, 10350
           </p>
         </div>
 
@@ -108,7 +107,7 @@ export default function Footer() {
           <form onSubmit={handleVerify} className="flex flex-col gap-2">
             <input
               type="text"
-              className="px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-950"
+              className="px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-900"
               placeholder="Kode verifikasi..."
               value={code}
               onChange={(e) => setCode(e.target.value)}
@@ -123,7 +122,7 @@ export default function Footer() {
             </button>
           </form>
         </div>
-      </div>
+      </div>  
       
       {/* Bagian Copyright di bawah */}
       <div className="text-center mt-12 pt-8 border-t border-gray-800">

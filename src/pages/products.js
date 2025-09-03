@@ -4,8 +4,8 @@ import ProductCard from './components/ProductCard';
 
 // Data produk dummy yang hanya berisi dua item
 const products = [
-  { id: 1, name: 'Emas Batangan', weight: '10 gram', image: '/Gambar2.jpg' },
-  { id: 2, name: 'Koin Emas', weight: '5 gram', image: '/Gambar2.jpg' },
+  { id: 1, name: '1 Dinar 4,25gr', weight: '4,25 gram', image: '/Dinar.png' },
+  { id: 2, name: 'Find Gold', weight: '1 gram', image: '/find.png' },
 ];
 
 export default function Products() {
