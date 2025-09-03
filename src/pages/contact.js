@@ -7,6 +7,7 @@ export default function About() {
     <>
       <Head>
         <title>Tentang Kami - ABI GOLD</title>
+        <link rel="icon" href="/Abi.png" />
       </Head>
       {/* Container utama dengan padding atas yang lebih besar untuk menghindari navbar */}
       <div className="container mx-auto py-24 px-6"> {/* py-24 untuk jarak dari navbar */}

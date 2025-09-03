@@ -11,7 +11,7 @@ export default function Footer() {
           <h4 className="font-bold text-xl text-white mb-4">
             1 keping 1000 meaning
           </h4>
-          <div className="flex items-center justify-center md:justify-start mb-4">
+          <div className="flex items-center justify-center  md:justify-start mb-4">
             <Image
               src="/Abi.png" // Path ke logo Anda
               alt="PT Aurum Barakah Indonesia"

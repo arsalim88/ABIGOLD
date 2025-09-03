@@ -32,7 +32,7 @@ export default function Home() {
       quote: "Harga emas di sini sangat kompetitif. Rekomendasi banget!",
       name: "Siti H.",
       title: "Kolektor",
-      image: "/images/person3.jpg", // Ganti dengan path foto Anda
+      image: "/pp1.png", // Ganti dengan path foto Anda
     },
   ];
 
@@ -61,6 +61,9 @@ export default function Home() {
           name="description"
           content="Situs web profil perusahaan emas semi-komersial."
         />
+
+      <link rel="icon" href="/Abi.png" />
+
       </Head>
       {/* Bagian 1: Hero Section */}
       <div className="relative h-screen flex items-center justify-start">

@@ -32,6 +32,7 @@ export default function VerifikasiEmas() {
     <>
       <Head>
         <title>Verifikasi Keaslian Emas</title>
+        <link rel="icon" href="/Abi.png" />
       </Head>
       <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative z-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/green.jpg')" }}>
         <div className="absolute inset-0 bg-black opacity-30 z-10"></div>

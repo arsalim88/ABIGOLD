@@ -13,6 +13,7 @@ export default function Products() {
     <>
       <Head>
         <title>Produk ABI GOLD</title>
+        <link rel="icon" href="/Abi.png" />
       </Head>
       <div className="container mx-auto py-16 px-6">
         {/* Bagian Hero untuk Halaman Produk */}
