@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "Emas: Lindung Nilai dari Inflasi dan Gejolak Ekonomi",
     "title": "Emas: Lindung Nilai dari Inflasi dan Gejolak Ekonomi",
     "image": "/article-gold-inflation.png",
     "excerpt": "Pelajari mengapa emas menjadi pilihan populer sebagai aset investasi di tengah ketidakpastian ekonomi global dan inflasi yang terus meningkat.",
@@ -29,7 +29,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": "5 Alasan Mengapa Anda Harus Memiliki Emas",
     "title": "5 Alasan Mengapa Anda Harus Memiliki Emas",
     "image": "/article-why-gold.png",
     "excerpt": "Investasi emas tidak hanya menguntungkan tetapi juga memberikan keamanan finansial. Berikut adalah lima alasan utama untuk memiliki emas.",
@@ -41,11 +41,11 @@
       {
         "type": "list",
         "items": [
-          "**Lindung Nilai terhadap Inflasi:** Nilai emas tidak terpengaruh oleh inflasi. Ketika harga-harga naik, nilai emas cenderung naik seiring waktu.",
-          "**Diversifikasi Portofolio:** Menambahkan emas ke portofolio investasi dapat mengurangi risiko dan volatilitas secara keseluruhan.",
-          "**Aset 'Safe Haven':** Dalam kondisi ketidakpastian ekonomi atau politik, emas seringkali menjadi pilihan utama investor.",
-          "**Likuiditas Tinggi:** Emas dapat dengan mudah dijual dan dicairkan menjadi uang tunai di mana saja di seluruh dunia.",
-          "**Nilai Jangka Panjang:** Sejarah menunjukkan bahwa emas mempertahankan nilainya dalam jangka waktu yang sangat panjang, menjadikannya warisan berharga untuk generasi mendatang."
+          "Lindung Nilai terhadap Inflasi: Nilai emas tidak terpengaruh oleh inflasi. Ketika harga-harga naik, nilai emas cenderung naik seiring waktu.",
+          "Diversifikasi Portofolio: Menambahkan emas ke portofolio investasi dapat mengurangi risiko dan volatilitas secara keseluruhan.",
+          "Aset 'Safe Haven': Dalam kondisi ketidakpastian ekonomi atau politik, emas seringkali menjadi pilihan utama investor.",
+          "Likuiditas Tinggi: Emas dapat dengan mudah dijual dan dicairkan menjadi uang tunai di mana saja di seluruh dunia.",
+          "Nilai Jangka Panjang: Sejarah menunjukkan bahwa emas mempertahankan nilainya dalam jangka waktu yang sangat panjang, menjadikannya warisan berharga untuk generasi mendatang."
         ]
       }
     ]
