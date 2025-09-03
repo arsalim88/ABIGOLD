@@ -154,21 +154,22 @@ export default function Home() {
       </div>
 
       {/* Bagian 2: Tentang Emas */}
-      {/* <div className="container mx-auto py-16 px-6">
+      <div className="container mx-auto py-16 px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2 text-center md:text-left">
             <h2 className="text-3xl font-bold mb-4 text-green-950">
-              Emas: Simbol Kekayaan Abadi
+              Tentang Kami
             </h2>
             <p className="text-green-950">
-              Emas telah lama dianggap sebagai investasi yang aman dan stabil.
-              Selain nilai historisnya, emas juga berfungsi sebagai lindung
-              nilai terhadap inflasi dan ketidakpastian ekonomi.
+              PT Aurum Barakah Indonesia adalah perusahaan yang fokus pada penyediaan produk emas berkualitas tinggi, khususnya kepingan emas 1 gram dan dinar. Kami berkomitmen untuk memberikan pilihan investasi yang aman, praktis, dan menguntungkan bagi masyarakat Indonesia.
+              <br />
+              <br />
+              Emas yang kami tawarkan bersertifikat. Setiap keping emas, baik 1 gram maupun dinar, memiliki kadar 24 karat atau 999,9 dan dilengkapi sertifikat keaslian yang menjamin kemurnian dan kualitas terbaik. Kepingan emas 1 gram sangat ideal bagi investor pemula atau mereka yang ingin memulai investasi dengan modal terjangkau, sementara dinar, dengan nilai intrinsik dan sejarahnya yang tinggi, menjadi pilihan investasi bagi mereka yang menginginkan aset berharga dengan nilai abadi.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center md:justify-end">
             <Image
-              src="/Gambar2.jpg"
+              src="/investment2.jpg"
               alt="Emas Batangan"
               width={500}
               height={300}
@@ -176,7 +177,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Bagian 3: Produk Unggulan */}
       <div className="container mx-auto py-16 px-6">
