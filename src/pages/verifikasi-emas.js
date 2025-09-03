@@ -35,7 +35,7 @@ export default function VerifikasiEmas() {
         <link rel="icon" href="/Abi.png" />
       </Head>
       <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative z-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/green.jpg')" }}>
-        <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
+        <div className="absolute inset-0 bg-black opacity-10 z-10"></div>
         <div className="relative z-20 max-w-md w-full space-y-8 p-10 bg-white rounded-xl shadow-2xl transition-all duration-300 transform">
           <div>
             <h1 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
