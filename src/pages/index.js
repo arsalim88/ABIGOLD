@@ -248,7 +248,7 @@ export default function Home() {
                 />
               </div>
             </Link>
-            <Link
+            {/* <Link
               href="https://tokopedia.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -263,7 +263,7 @@ export default function Home() {
                   className="hover:scale-110 transition-transform"
                 />
               </div>
-            </Link>
+            </Link> */}
             <Link
               href="https://tiktok.com/shop"
               target="_blank"

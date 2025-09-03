@@ -23,7 +23,8 @@ export default function Products() {
         </div>
 
         {/* Kontainer Flexbox untuk memusatkan produk */}
-        <div className="flex justify-center gap-8 flex-wrap">
+        <div className="flex justify-center 
+        gap-8 flex-wrap">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

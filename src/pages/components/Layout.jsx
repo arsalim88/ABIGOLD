@@ -12,4 +12,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout; // <-- Pastikan baris ini ada
+export default Layout;
