@@ -12,7 +12,7 @@ export default function Products() {
   return (
     <>
       <Head>
-        <title>Produk Emas Kami</title>
+        <title>Produk ABI GOLD</title>
       </Head>
       <div className="container mx-auto py-16 px-6">
         {/* Bagian Hero untuk Halaman Produk */}

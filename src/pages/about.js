@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Tentang Kami - Emas Kita</title>
+        <title>Tentang Kami - ABI GOLD</title>
       </Head>
       {/* Container utama dengan padding atas yang lebih besar untuk menghindari navbar */}
       <div className="container mx-auto py-24 px-6"> {/* py-24 untuk jarak dari navbar */}

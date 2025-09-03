@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Emas Kita - Perusahaan Emas Terpercaya</title>
+        <title>ABI GOLD</title>
         <meta
           name="description"
           content="Situs web profil perusahaan emas semi-komersial."
