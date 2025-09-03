@@ -3,8 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import ProductCard from "./components/ProductCard";
-import ArticleCard from "./components/ArticleCard";
+import ProductCard from "../components/ProductCard";
+import ArticleCard from "../components/ArticleCard";
 import articlesData from "../pages/articles/data/articles.json";
 
 export default function Home() {
@@ -230,7 +230,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col items-center">
                 <Image
-                  src={currentTestimonial == null ? '/placeholder.png' : currentTestimonial?.image}
+                  src={currentTestimonial == null ? '/Abi.png' : currentTestimonial?.image}
                   alt={currentTestimonial.name}
                   width={80}
                   height={80}

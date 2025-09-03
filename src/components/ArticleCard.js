@@ -8,7 +8,7 @@ const ArticleCard = ({ article }) => {
       <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer h-full">
         <div className="relative w-full h-48">
           <Image
-            src={article == null ? '/placeholder.png' : article?.image}
+            src={article == null ? '/Abi.png' : article?.image}
             alt={article?.title}
             fill
             cover

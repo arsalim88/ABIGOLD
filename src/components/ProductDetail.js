@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
       {/* Bagian Image Besar */}
       <div className="relative w-full h-80 mb-6">
         <Image
-          src={product == null ? '/placeholder.png' : product?.image}
+          src={product == null ? '/Abi.png' : product?.image}
           alt={product?.name}
           layout="fill"
           objectFit="contain"
@@ -46,7 +46,7 @@ const ProductCard = ({ product }) => {
               <div key={index} className="w-1/2">
                 <div className="relative pb-[100%]">
                   <Image
-                    src={img == null ? '/placeholder.png' : img}
+                    src={img == null ? '/Abi.png' : img}
                     alt={`${product.name} - ${index + 1}`}
                     layout="fill"
                     objectFit="cover"
