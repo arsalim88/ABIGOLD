@@ -64,7 +64,7 @@ export default function Home() {
         <title>ABI</title>
         <meta
           name="description"
-          content="Situs web profil perusahaan emas semi-komersial."
+          content="Perusahaan Emas Terpercaya"
         />
         <link rel="icon" href="/Abi.png" />
       </Head>
