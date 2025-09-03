@@ -92,6 +92,32 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Bagian 2: Tentang Emas */}
+      <div className="container mx-auto py-16 px-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="md:w-1/2 text-center md:text-left">
+            <h2 className="text-3xl font-bold mb-4 text-green-950">
+              Tentang Kami
+            </h2>
+            <p className="text-green-950">
+              PT Aurum Barakah Indonesia adalah perusahaan yang fokus pada penyediaan produk emas berkualitas tinggi, khususnya kepingan emas 1 gram dan dinar. Kami berkomitmen untuk memberikan pilihan investasi yang aman, praktis, dan menguntungkan bagi masyarakat Indonesia.
+              <br />
+              <br />
+              Emas yang kami tawarkan bersertifikat. Setiap keping emas, baik 1 gram maupun dinar, memiliki kadar 24 karat atau 999,9 dan dilengkapi sertifikat keaslian yang menjamin kemurnian dan kualitas terbaik. Kepingan emas 1 gram sangat ideal bagi investor pemula atau mereka yang ingin memulai investasi dengan modal terjangkau, sementara dinar, dengan nilai intrinsik dan sejarahnya yang tinggi, menjadi pilihan investasi bagi mereka yang menginginkan aset berharga dengan nilai abadi.
+            </p>
+          </div>
+          <div className="md:w-1/2 flex justify-center md:justify-end">
+            <Image
+              src="/investment2.jpg"
+              alt="Emas Batangan"
+              width={500}
+              height={300}
+              className="rounded-lg shadow-xl"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Bagian 4: Tabel Harga Emas */}
       <div className="bg-gray-100 py-16 px-6">
         <div className="container mx-auto">
@@ -153,32 +179,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Bagian 2: Tentang Emas */}
-      <div className="container mx-auto py-16 px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-3xl font-bold mb-4 text-green-950">
-              Tentang Kami
-            </h2>
-            <p className="text-green-950">
-              PT Aurum Barakah Indonesia adalah perusahaan yang fokus pada penyediaan produk emas berkualitas tinggi, khususnya kepingan emas 1 gram dan dinar. Kami berkomitmen untuk memberikan pilihan investasi yang aman, praktis, dan menguntungkan bagi masyarakat Indonesia.
-              <br />
-              <br />
-              Emas yang kami tawarkan bersertifikat. Setiap keping emas, baik 1 gram maupun dinar, memiliki kadar 24 karat atau 999,9 dan dilengkapi sertifikat keaslian yang menjamin kemurnian dan kualitas terbaik. Kepingan emas 1 gram sangat ideal bagi investor pemula atau mereka yang ingin memulai investasi dengan modal terjangkau, sementara dinar, dengan nilai intrinsik dan sejarahnya yang tinggi, menjadi pilihan investasi bagi mereka yang menginginkan aset berharga dengan nilai abadi.
-            </p>
-          </div>
-          <div className="md:w-1/2 flex justify-center md:justify-end">
-            <Image
-              src="/investment2.jpg"
-              alt="Emas Batangan"
-              width={500}
-              height={300}
-              className="rounded-lg shadow-xl"
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Bagian 3: Produk Unggulan */}
       <div className="container mx-auto py-16 px-6">
         <h2 className="text-3xl font-bold text-green-950 text-center mb-8">
@@ -226,7 +226,7 @@ export default function Home() {
           <div className="w-full md:w-2/3">
             <div className="bg-white p-6 rounded-lg text-center animate-slide-in-in-place">
               <p className="italic text-green-950 mb-6 text-lg">
-                "{currentTestimonial.quote}"
+                {currentTestimonial.quote}
               </p>
               <div className="flex flex-col items-center">
                 <Image
@@ -268,18 +268,16 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-green-950 text-center mb-8">
           Artikel Terbaru
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articlesData.map((article) => (
             <ArticleCard key={article.id} article={article} />
           ))}
-        </div>
-        <div className="text-center mt-12">
-          <Link
-            href="/blog" // Ubah ini jika Anda ingin halaman blog terpisah
-            className="bg-green-800 text-white font-bold py-3 px-8 rounded-full hover:bg-gray-700 transition duration-300"
-          >
-            Lihat Semua Artikel
-          </Link>
+          {/* Tambahkan placeholder jika jumlah artikel < 3 */}
+          {articlesData.length < 3 && (
+            <div className="hidden lg:block h-full">
+              {/* Ini adalah div kosong untuk mengisi ruang */}
+            </div>
+          )}
         </div>
       </div>
 
@@ -304,15 +302,16 @@ export default function Home() {
                 <Image
                   src="/shopee.png"
                   alt="Shopee"
-                  layout="fill"
-                  objectFit="contain"
+                  width={300}
+                  height={300}
+                  cover
                   className="hover:scale-110 transition-transform"
                 />
               </div>
             </Link>
           </div>
 
-          <h2 className="text-3xl font-bold mb-4">Download Aplikasi Kami</h2>
+          <h2 className="text-3xl font-bold mb-4 mt-30">Download Aplikasi Kami</h2>
           <p className="mb-8">
             Dapatkan kemudahan verifikasi dan update harga langsung dari
             smartphone Anda.
@@ -329,8 +328,9 @@ export default function Home() {
                 <Image
                   src="/py.png"
                   alt="Google Play"
-                  layout="fill"
-                  objectFit="contain"
+                  width={500}
+                  height={500}
+                  contain
                   className="hover:scale-110 transition-transform"
                 />
               </div>

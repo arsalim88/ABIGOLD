@@ -6,11 +6,11 @@ export default function ProductCard({ product }) {
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 w-64 md:w-72">
       {/* Container untuk memastikan gambar memiliki ukuran tetap */}
       <div className="relative w-full h-64 md:h-72">
-        <Image 
-          src={product.image} 
-          alt={product.name} 
-          layout="fill" // Mengisi ruang dari parent container
-          objectFit="cover" // Memastikan gambar mengisi ruang tanpa distorsi
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          cover // Memastikan gambar mengisi ruang tanpa distorsi
         />
       </div>
       <div className="p-4 text-center">

@@ -10,8 +10,8 @@ const ArticleCard = ({ article }) => {
           <Image
             src={article.image}
             alt={article.title}
-            layout="fill"
-            objectFit="cover"
+            fill
+            cover
             className="rounded-t-lg"
           />
         </div>

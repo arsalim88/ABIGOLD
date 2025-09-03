@@ -59,7 +59,7 @@ const ArticleDetailPage = () => {
                     key={index}
                     className="border-l-4 border-yellow-500 pl-4 italic text-gray-600 my-4"
                   >
-                    <p>"{block.text}"</p>
+                    <p>{block.text}</p>
                     {block.author && (
                       <footer className="mt-2 text-sm text-gray-500">
                         {" "}
