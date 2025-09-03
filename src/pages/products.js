@@ -19,8 +19,7 @@ export default function Products() {
       <div className="container mx-auto py-16 px-6">
         {/* Bagian Hero untuk Halaman Produk */}
         <div className="text-center py-12">
-          <h1 className="text-4xl font-bold mb-2">Produk Emas Kami</h1>
-          <p className="text-lg text-gray-600">Temukan koleksi emas batangan, koin, dan perhiasan.</p>
+          <h1 className="text-4xl font-bold mb-2">Produk Kami</h1>
         </div>
 
         {/* Kontainer Flexbox untuk memusatkan produk */}
