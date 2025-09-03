@@ -154,7 +154,7 @@ export default function Home() {
       </div>
 
       {/* Bagian 2: Tentang Emas */}
-      <div className="container mx-auto py-16 px-6">
+      {/* <div className="container mx-auto py-16 px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2 text-center md:text-left">
             <h2 className="text-3xl font-bold mb-4 text-green-950">
@@ -176,7 +176,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Bagian 3: Produk Unggulan */}
       <div className="container mx-auto py-16 px-6">
