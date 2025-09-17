@@ -30,7 +30,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-gray-300 py-16 px-8 border-t border-gray-800">
+    <footer className={`bg-[var(--dark-green)] text-gray-300 py-16 px-8 border-t border-gray-800`}>
       {/* Grid 4 kolom untuk footer */}
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
         {/* Kolom 1: Logo & Informasi Kontak */}
@@ -48,7 +48,7 @@ export default function Footer() {
             />
           </div>
           <p className="font-bold">PT Aurum Barakah Indonesia</p>
-          <p className="text-sm font-semibold">Admin: +62 812-3456-7890</p>
+          <p className="text-sm font-semibold">Admin: +6287825159746</p>
           <p className="text-sm">
             The Plaza Office Tower, Jl. M.H Thamrin No.Kav. 28-30 Level 7 suite 702,Menteng, Jakarta Pusat, DKI Jakarta, 10350
           </p>
@@ -74,11 +74,6 @@ export default function Footer() {
                 Tentang Kami
               </Link>
             </li>
-            <li>
-              <Link href="/contact" className="hover:text-yellow-500 transition-colors duration-200">
-                Kontak
-              </Link>
-            </li>
           </ul>
         </div>
 
@@ -88,41 +83,57 @@ export default function Footer() {
           <h4 className="font-bold text-lg text-white mb-4">Informasi</h4>
           <ul className="space-y-2">
             <li>
-              <Link href="/syarat-ketentuan" className="hover:text-yellow-500 transition-colors duration-200">
-                Syarat & Ketentuan
-              </Link>
-            </li>
-            <li>
               <Link href="/kebijakan-privasi" className="hover:text-yellow-500 transition-colors duration-200">
                 Kebijakan Privasi
               </Link>
             </li>
+            <li>
+              <Link href="/garansi" className="hover:text-yellow-500 transition-colors duration-200">
+                Garansi
+              </Link>
+            </li>
+            <li>
+              <Link href="/refund" className="hover:text-yellow-500 transition-colors duration-200">
+                Pengembalian
+              </Link>
+            </li>
           </ul>
         </div>
-        
-        {/* Kolom 4: Formulir Verifikasi */}
-        <div className="mt-8 md:mt-0 ">
+
+        {/* Kolom 4: Sosial Media */}
+        <div className="mt-8 md:mt-0">
           <div className="h-6 mb-4 hidden md:block"></div>
-          <h4 className="font-bold text-lg text-white mb-4">Verifikasi Keaslian</h4>
-          <form onSubmit={handleVerify} className="flex flex-col gap-2">
-            <input
-              type="text"
-              className="px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-900"
-              placeholder="Kode verifikasi..."
-              value={code}
-              onChange={(e) => setCode(e.target.value)}
-              required
-            />
-            <button
-              type="submit"
-              className="bg-green-700 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-900 transition duration-300 disabled:bg-gray-600"
-              disabled={loading}
+          <h4 className="font-bold text-lg text-white mb-4">Temukan Kami di</h4>
+          <div className="flex justify-center md:justify-start gap-4">
+            <a 
+              href="https://www.instagram.com/abigold.id?igsh=b250bDd1YmRzZzNz" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
             >
-              {loading ? 'Memverifikasi...' : 'Verifikasi'}
-            </button>
-          </form>
+              <Image
+                src="/instagram.png" // Pastikan Anda memiliki file ikon ini di folder public
+                alt="Instagram"
+                width={32}
+                height={32}
+              />
+            </a>
+            <a 
+              href="https://www.tiktok.com/@abigold.id?_t=ZS-8zPYv5nYI8y&_r=1" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
+            >
+              <Image
+                src="/tiktok.png" // Pastikan Anda memiliki file ikon ini di folder public
+                alt="TikTok"
+                width={32}
+                height={32}
+              />
+            </a>
+          </div>
         </div>
-      </div>  
+      </div>
       
       {/* Bagian Copyright di bawah */}
       <div className="text-center mt-12 pt-8 border-t border-gray-800">

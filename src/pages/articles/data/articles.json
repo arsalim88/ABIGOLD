@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "title": "Emas: Lindung Nilai dari Inflasi dan Gejolak Ekonomi",
+    "image": "/article-gold-inflation.png",
+    "excerpt": "Pelajari mengapa emas menjadi pilihan populer sebagai aset investasi di tengah ketidakpastian ekonomi global dan inflasi yang terus meningkat.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Emas telah lama dianggap sebagai salah satu instrumen investasi tertua dan paling andal di dunia. Salah satu peran utamanya adalah sebagai 'safe haven' atau aset yang aman, terutama saat pasar keuangan mengalami gejolak. Nilai emas cenderung bergerak berlawanan dengan pasar saham dan mata uang, menjadikannya pilihan ideal untuk diversifikasi portofolio."
+      },
+      {
+        "type": "heading",
+        "text": "Mengapa Emas Tahan Inflasi?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Inflasi adalah penurunan daya beli mata uang. Ketika inflasi naik, nilai uang kertas berkurang. Sebaliknya, emas memiliki nilai intrinsik yang stabil. Produksi emas yang terbatas dan permintaan global yang konstan memastikan nilainya tetap terjaga, bahkan saat inflasi melonjak. "
+      },
+      {
+        "type": "quote",
+        "text": "Investasi emas adalah strategi bijak untuk menjaga kekayaan Anda agar tidak tergerus inflasi.",
+        "author": "John Smith"
+      },
+      {
+        "type": "paragraph",
+        "text": "Tidak seperti aset digital atau saham yang dapat terpengaruh sentimen pasar, emas tetap menjadi aset fisik yang berharga. Ini memberikan ketenangan pikiran bagi investor yang ingin melindungi tabungan jangka panjang mereka. Dengan memiliki emas, Anda tidak hanya berinvestasi pada komoditas, tetapi juga pada sejarah dan stabilitas keuangan."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "5 Alasan Mengapa Anda Harus Memiliki Emas",
+    "image": "/article-why-gold.png",
+    "excerpt": "Investasi emas tidak hanya menguntungkan tetapi juga memberikan keamanan finansial. Berikut adalah lima alasan utama untuk memiliki emas.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Emas telah menjadi simbol kekayaan dan kemakmuran selama ribuan tahun. Namun, nilai sebenarnya terletak pada fungsinya sebagai alat investasi yang solid. Mari kita selami lebih dalam mengapa emas adalah aset yang harus dimiliki."
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Lindung Nilai terhadap Inflasi:** Nilai emas tidak terpengaruh oleh inflasi. Ketika harga-harga naik, nilai emas cenderung naik seiring waktu.",
+          "**Diversifikasi Portofolio:** Menambahkan emas ke portofolio investasi dapat mengurangi risiko dan volatilitas secara keseluruhan.",
+          "**Aset 'Safe Haven':** Dalam kondisi ketidakpastian ekonomi atau politik, emas seringkali menjadi pilihan utama investor.",
+          "**Likuiditas Tinggi:** Emas dapat dengan mudah dijual dan dicairkan menjadi uang tunai di mana saja di seluruh dunia.",
+          "**Nilai Jangka Panjang:** Sejarah menunjukkan bahwa emas mempertahankan nilainya dalam jangka waktu yang sangat panjang, menjadikannya warisan berharga untuk generasi mendatang."
+        ]
+      }
+    ]
+  }
+]
