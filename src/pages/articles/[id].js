@@ -2,13 +2,14 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
-import articlesData from "./data/articles.json";
+import articlesData from "./data/articles.json"; // Pastikan path benar
 import Link from "next/link";
 
 const ArticleDetailPage = () => {
   const router = useRouter();
   const { id } = router.query;
-  const article = articlesData.find((art) => art.id === parseInt(id));
+  // Langsung cari id tanpa parseInt() karena id di JSON juga string
+  const article = articlesData.find((art) => art.id === id);
 
   if (!article) {
     return (
@@ -25,7 +26,7 @@ const ArticleDetailPage = () => {
       </Head>
       <div className="container mx-auto py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-xl md:text-xl font-extrabold text-green-950 mb-6">
+          <h1 className="text-3xl md:text-3xl font-extrabold text-green-950 mb-6">
             {article.title}
           </h1>
           <div className="relative w-full h-80 mb-8">
@@ -44,24 +45,41 @@ const ArticleDetailPage = () => {
               }
               if (block.type === "heading") {
                 return (
-                  <h2 key={index} className="text-3xl font-bold text-green-800 mt-8 mb-4">
+                  <h2
+                    key={index}
+                    className="text-lg font-bold text-green-800 mt-8 mb-4"
+                  >
                     {block.text}
                   </h2>
                 );
               }
               if (block.type === "quote") {
                 return (
-                  <blockquote key={index} className="border-l-4 border-yellow-500 pl-4 italic text-gray-600 my-4">
-                    <p>"{block.text}"</p>
-                    {block.author && <footer className="mt-2 text-sm text-gray-500"> — {block.author}</footer>}
+                  <blockquote
+                    key={index}
+                    className="border-l-4 border-yellow-500 pl-4 italic text-gray-600 my-4"
+                  >
+                    <p>{block.text}</p>
+                    {block.author && (
+                      <footer className="mt-2 text-sm text-gray-500">
+                        {" "}
+                        — {block.author}
+                      </footer>
+                    )}
                   </blockquote>
                 );
               }
               if (block.type === "list") {
                 return (
-                  <ul key={index} className="list-disc list-inside space-y-2 my-4">
+                  <ul
+                    key={index}
+                    className="list-disc list-inside space-y-2 my-4"
+                  >
                     {block.items.map((item, i) => (
-                      <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
+                      <li
+                        key={i}
+                        dangerouslySetInnerHTML={{ __html: item }}
+                      />
                     ))}
                   </ul>
                 );
@@ -69,7 +87,10 @@ const ArticleDetailPage = () => {
               return null;
             })}
           </div>
-          <Link href="/" className="mt-8 inline-block text-green-700 hover:text-green-900 font-semibold">
+          <Link
+            href="/"
+            className="mt-8 inline-block text-green-700 hover:text-green-900 font-semibold"
+          >
             &larr; Kembali ke Beranda
           </Link>
         </div>

@@ -1,6 +1,6 @@
 // pages/products.js
 import Head from 'next/head';
-import ProductCard from './components/ProductCard';
+import ProductCard from '../components/ProductCard';
 import Link from 'next/link';
 
 // Data produk dummy

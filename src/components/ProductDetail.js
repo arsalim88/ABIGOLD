@@ -11,8 +11,8 @@ const ProductCard = ({ product }) => {
       {/* Bagian Image Besar */}
       <div className="relative w-full h-80 mb-6">
         <Image
-          src={product.image}
-          alt={product.name}
+          src={product == null ? '/Abi.png' : product?.image}
+          alt={product?.name}
           layout="fill"
           objectFit="contain"
           className="rounded-lg"
@@ -22,11 +22,11 @@ const ProductCard = ({ product }) => {
       {/* Deskripsi Produk */}
       <div className="space-y-6 text-gray-700">
         <p className="text-lg leading-relaxed text-justify">
-          {product.description}
+          {product?.description}
         </p>
 
         {/* Ayat Al-Qur'an dan Maknanya */}
-        <div className="bg-gray-100 p-4 rounded-md shadow-inner text-center">
+        {/* <div className="bg-gray-100 p-4 rounded-md shadow-inner text-center">
           <p className="text-2xl font-serif italic mb-2">
             إِنَّ اللّهَ مَعَ الصَّابِرِينَ
           </p>
@@ -37,7 +37,7 @@ const ProductCard = ({ product }) => {
           <p className="text-sm mt-2 leading-relaxed">
             Makna dari ayat ini adalah bahwa Allah senantiasa memberikan pertolongan, keberkahan, dan dukungan kepada orang-orang yang bersabar dalam menghadapi ujian, kesulitan, atau cobaan hidup.
           </p>
-        </div>
+        </div> */}
 
         {/* Bagian Dua Image Sejajar */}
         {product.additionalImages && product.additionalImages.length > 0 && (
@@ -46,7 +46,7 @@ const ProductCard = ({ product }) => {
               <div key={index} className="w-1/2">
                 <div className="relative pb-[100%]">
                   <Image
-                    src={img}
+                    src={img == null ? '/Abi.png' : img}
                     alt={`${product.name} - ${index + 1}`}
                     layout="fill"
                     objectFit="cover"

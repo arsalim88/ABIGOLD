@@ -1,7 +1,7 @@
 // pages/products/[id].js
 import { useRouter } from 'next/router';
 import productsData from './data/products.json';
-import ProductCard from './productDetail';
+import ProductCard from '../../components/ProductDetail';
 
 const ProductDetailPage = () => {
   const router = useRouter();
