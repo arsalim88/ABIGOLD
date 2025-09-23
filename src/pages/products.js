@@ -6,7 +6,7 @@ import Link from 'next/link';
 // Data produk dummy
 const products = [
   { id: 1, name: '1 Dinar 4,25gr', weight: '4,25 gram', image: '/Dinar.png' },
-  { id: 2, name: 'Find Gold', weight: '1 gram', image: '/find.png' },
+  { id: 2, name: 'Fine Gold', weight: '1 gram', image: '/find.png' },
 ];
 
 export default function Products() {
@@ -18,6 +18,7 @@ export default function Products() {
       </Head>
       <div className="container mx-auto py-16 px-6">
         {/* Bagian Hero untuk Halaman Produk */}
+
         <div className="text-center py-12">
           <h1 className="text-4xl font-bold mb-2">Produk Kami</h1>
         </div>

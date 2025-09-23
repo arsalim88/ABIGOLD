@@ -3,8 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import ProductCard from "./components/ProductCard";
-import ArticleCard from "./components/ArticleCard";
+import ProductCard from "../components/ProductCard";
+import ArticleCard from "../components/ArticleCard";
 import articlesData from "../pages/articles/data/articles.json";
 
 export default function Home() {
@@ -30,7 +30,7 @@ export default function Home() {
 
   const homepageProducts = [
     { id: 1, name: "Dinar 4,25 gr", weight: "4,25 gram", image: "/Dinar.png" },
-    { id: 2, name: "Find Gold", weight: "1 gram", image: "/find.png" },
+    { id: 2, name: "Fine Gold", weight: "1 gram", image: "/find.png" },
   ];
 
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
@@ -61,10 +61,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ABI GOLD</title>
+        <title>ABI</title>
         <meta
           name="description"
-          content="Situs web profil perusahaan emas semi-komersial."
+          content="Perusahaan Emas Terpercaya"
         />
         <link rel="icon" href="/Abi.png" />
       </Head>
@@ -88,6 +88,32 @@ export default function Home() {
             >
               Lihat Produk Kami
             </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Bagian 2: Tentang Emas */}
+      <div className="container mx-auto py-16 px-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="md:w-1/2 text-center md:text-left">
+            <h2 className="text-3xl font-bold mb-4 text-green-950">
+              Tentang Kami
+            </h2>
+            <p className="text-green-950">
+              PT Aurum Barakah Indonesia adalah perusahaan yang fokus pada penyediaan produk emas berkualitas tinggi, khususnya kepingan emas 1 gram dan dinar. Kami berkomitmen untuk memberikan pilihan investasi yang aman, praktis, dan menguntungkan bagi masyarakat Indonesia.
+              <br />
+              <br />
+              Emas yang kami tawarkan bersertifikat. Setiap keping emas, baik 1 gram maupun dinar, memiliki kadar 24 karat atau 999,9 dan dilengkapi sertifikat keaslian yang menjamin kemurnian dan kualitas terbaik. Kepingan emas 1 gram sangat ideal bagi investor pemula atau mereka yang ingin memulai investasi dengan modal terjangkau, sementara dinar, dengan nilai intrinsik dan sejarahnya yang tinggi, menjadi pilihan investasi bagi mereka yang menginginkan aset berharga dengan nilai abadi.
+            </p>
+          </div>
+          <div className="md:w-1/2 flex justify-center md:justify-end">
+            <Image
+              src="/investment2.jpg"
+              alt="Emas Batangan"
+              width={500}
+              height={300}
+              className="rounded-lg shadow-xl"
+            />
           </div>
         </div>
       </div>
@@ -153,31 +179,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Bagian 2: Tentang Emas */}
-      <div className="container mx-auto py-16 px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-3xl font-bold mb-4 text-green-950">
-              Emas: Simbol Kekayaan Abadi
-            </h2>
-            <p className="text-green-950">
-              Emas telah lama dianggap sebagai investasi yang aman dan stabil.
-              Selain nilai historisnya, emas juga berfungsi sebagai lindung
-              nilai terhadap inflasi dan ketidakpastian ekonomi.
-            </p>
-          </div>
-          <div className="md:w-1/2 flex justify-center md:justify-end">
-            <Image
-              src="/Gambar2.jpg"
-              alt="Emas Batangan"
-              width={500}
-              height={300}
-              className="rounded-lg shadow-xl"
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Bagian 3: Produk Unggulan */}
       <div className="container mx-auto py-16 px-6">
         <h2 className="text-3xl font-bold text-green-950 text-center mb-8">
@@ -225,11 +226,11 @@ export default function Home() {
           <div className="w-full md:w-2/3">
             <div className="bg-white p-6 rounded-lg text-center animate-slide-in-in-place">
               <p className="italic text-green-950 mb-6 text-lg">
-                "{currentTestimonial.quote}"
+                {currentTestimonial.quote}
               </p>
               <div className="flex flex-col items-center">
                 <Image
-                  src={currentTestimonial.image}
+                  src={currentTestimonial == null ? '/Abi.png' : currentTestimonial?.image}
                   alt={currentTestimonial.name}
                   width={80}
                   height={80}
@@ -267,18 +268,16 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-green-950 text-center mb-8">
           Artikel Terbaru
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articlesData.map((article) => (
             <ArticleCard key={article.id} article={article} />
           ))}
-        </div>
-        <div className="text-center mt-12">
-          <Link
-            href="/blog" // Ubah ini jika Anda ingin halaman blog terpisah
-            className="bg-green-800 text-white font-bold py-3 px-8 rounded-full hover:bg-gray-700 transition duration-300"
-          >
-            Lihat Semua Artikel
-          </Link>
+          {/* Tambahkan placeholder jika jumlah artikel < 3 */}
+          {articlesData.length < 3 && (
+            <div className="hidden lg:block h-full">
+              {/* Ini adalah div kosong untuk mengisi ruang */}
+            </div>
+          )}
         </div>
       </div>
 
@@ -303,47 +302,16 @@ export default function Home() {
                 <Image
                   src="/shopee.png"
                   alt="Shopee"
-                  layout="fill"
-                  objectFit="contain"
+                  width={300}
+                  height={300}
+                  cover
                   className="hover:scale-110 transition-transform"
                 />
               </div>
             </Link>
-            {/* <Link
-              href="https://tokopedia.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex justify-center"
-            >
-              <div className="relative w-full" style={{ height: "100px" }}>
-                <Image
-                  src="/tokopedia.png"
-                  alt="Tokopedia"
-                  layout="fill"
-                  objectFit="contain"
-                  className="hover:scale-110 transition-transform"
-                />
-              </div>
-            </Link>
-            <Link
-              href="https://tiktok.com/shop"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 flex justify-center"
-            >
-              <div className="relative w-full" style={{ height: "100px" }}>
-                <Image
-                  src="/tiktok.png"
-                  alt="TikTok Shop"
-                  layout="fill"
-                  objectFit="contain"
-                  className="hover:scale-110 transition-transform"
-                />
-              </div>
-            </Link> */}
           </div>
 
-          <h2 className="text-3xl font-bold mb-4">Download Aplikasi Kami</h2>
+          <h2 className="text-3xl font-bold mb-4 mt-30">Download Aplikasi Kami</h2>
           <p className="mb-8">
             Dapatkan kemudahan verifikasi dan update harga langsung dari
             smartphone Anda.
@@ -360,8 +328,9 @@ export default function Home() {
                 <Image
                   src="/py.png"
                   alt="Google Play"
-                  layout="fill"
-                  objectFit="contain"
+                  width={500}
+                  height={500}
+                  contain
                   className="hover:scale-110 transition-transform"
                 />
               </div>
