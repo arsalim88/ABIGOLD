@@ -1,11 +1,11 @@
 // components/Footer.jsx
-import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
-import ResultModal from "./ui/ResultModal"; // Pastikan path benar
+import Link from 'next/link';
+import Image from 'next/image';
+import { useState } from 'react';
+import ResultModal from './ui/ResultModal'; // Pastikan path benar
 
 export default function Footer() {
-  const [code, setCode] = useState("");
+  const [code, setCode] = useState('');
   const [result, setResult] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -22,7 +22,7 @@ export default function Footer() {
       const data = await response.json();
       setResult(data);
     } catch (error) {
-      setResult({ success: false, message: "Terjadi kesalahan pada server." });
+      setResult({ success: false, message: 'Terjadi kesalahan pada server.' });
     } finally {
       setLoading(false);
       setShowModal(true);
