@@ -1,11 +1,11 @@
 // components/Footer.jsx
-import Link from 'next/link';
-import Image from 'next/image';
-import { useState } from 'react';
-import ResultModal from './ui/ResultModal'; // Pastikan path benar
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+import ResultModal from "./ui/ResultModal"; // Pastikan path benar
 
 export default function Footer() {
-  const [code, setCode] = useState('');
+  const [code, setCode] = useState("");
   const [result, setResult] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -22,7 +22,7 @@ export default function Footer() {
       const data = await response.json();
       setResult(data);
     } catch (error) {
-      setResult({ success: false, message: 'Terjadi kesalahan pada server.' });
+      setResult({ success: false, message: "Terjadi kesalahan pada server." });
     } finally {
       setLoading(false);
       setShowModal(true);
@@ -157,6 +157,19 @@ export default function Footer() {
                 alt="TikTok"
                 width={32}
                 height={32}
+              />
+            </a>
+            <a
+              href="https://wa.me/6287825159746" // Ganti URL ke tautan WhatsApp
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-green-500 transition-colors duration-200" // Warna hover bisa diubah jadi hijau agar sesuai WA
+            >
+              <Image
+                src="/whatsapp.png" // Ganti path file ikon ke ikon WhatsApp
+                alt="WhatsApp" // Ganti deskripsi alt
+                width={35}
+                height={35}
               />
             </a>
           </div>
