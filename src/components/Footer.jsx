@@ -46,6 +46,7 @@ export default function Footer() {
               alt="PT Aurum Barakah Indonesia"
               width={400}
               height={360}
+
               className="w-auto h-8"
             />
           </div>
